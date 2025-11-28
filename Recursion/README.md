@@ -62,23 +62,24 @@ void f(int i, List curr) {
 }
 
 🔹 Pattern 2: Generate Parentheses
-void f(open, close, curr):
-    if length == 2*n:
-        add curr
-        return
 
-    if open < n:
-        f(open+1, close, curr + "(")
+     void f(open, close, curr){
+         if length == 2*n:
+                          add curr
+                          return 
+         if open < n:
+                      f(open+1, close, curr + "(")
 
-    if close < open:
-        f(open, close+1, curr + ")")
+         if close < open:
+                      f(open, close+1, curr + ")")
         
 🔹 Pattern 3: Permutations
 
-if (used all numbers)
+    if (used all numbers)
     add result
 
-for each number:
+    for each number:
+    
     if not used:
         used[i] = true
         curr.add(nums[i])
@@ -87,10 +88,12 @@ for each number:
         curr.removeLast()
 
 🔹 Pattern 4: Combinations:
-if (k numbers chosen)
-    store result
 
-for num from start → n:
+    if (k numbers chosen)
+
+    store result
+    for num from start → n:
+
     curr.add(num)
     f(num+1)
     curr.removeLast()
@@ -98,16 +101,14 @@ for num from start → n:
 
 🔹 Pattern 5: Maze / Grid backtracking
 
-if out of bounds or blocked:
+    if out of bounds or blocked:
     return
-
-if dest reached:
+    if dest reached:
     print path
-
-mark visited
-for each direction:
+    mark visited
+    for each direction:
     move
-unmark visited
+    unmark visited
 
 
 # Recursion vs Backtracking – Summary Table
