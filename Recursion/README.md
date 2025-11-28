@@ -54,10 +54,10 @@ void f(int i, List curr) {
     //base condition
     if (i == n) { print curr; return; }
     // include
-    curr.add(arr[i]);
+     curr.add(arr[i]);
     f(i+1, curr);
     // exclude
-    curr.removeLast();
+     curr.removeLast();
     f(i+1, curr);
 }
 
