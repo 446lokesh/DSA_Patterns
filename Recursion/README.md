@@ -49,7 +49,8 @@ Works for:
 ⭐ 4. MEMORIZE THESE COMMON PATTERNS
 🔹 Pattern 1: Print all subsequences
 
-  void f(int i, List curr) {
+void f(int i, List curr) {
+  
     //base condition
     if (i == n) { print curr; return; }
     // include
